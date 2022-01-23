@@ -4,21 +4,25 @@ const meal = {
     dessert: ['ice cream', 'cake', 'cheesecake', 'cookies', 'brownies'] 
 };
 
+let fullMeal = [];
+
 for (const [key, value] of Object.entries(meal)) {
   let i = Math.floor(Math.random() * key.length); 
 
   switch (key) {
-      
+
   case 'appetizer':
-  console.log(`Start with: ${value[i]}`);
+    fullMeal.push(`Start with: ${value[i]}`);
   break;
 
   case 'main':
-  console.log(`Your meal will be: ${value[i]}`);
+    fullMeal.push(`Your meal will be: ${value[i]}`);
   break;
 
   case 'dessert':
-  console.log(`Your dessert will be: ${value[i]}`);
+    fullMeal.push(`Your dessert will be: ${value[i]}`);
   break;
   }
 }
+
+console.log(fullMeal)
